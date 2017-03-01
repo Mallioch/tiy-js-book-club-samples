@@ -1,20 +1,41 @@
 $(function() {
 
   var ToggleView = Controller.create({
-    init: function(view) {
-      console.log('subview init');
-      this.view = $(view);
-      this.view.mouseover(this.proxy(this.toggleClass));
-      this.view.mouseout(this.proxy(this.toggleClass));
+
+    events: {
+      'mouseover': 'toggleClass',
+      'mouseout': 'toggleClass'
     },
 
+    init: function() {},
+
     toggleClass: function(e) {
-      console.log('toggle');
-      this.view.toggleClass('over', e.data);
+      this.el.toggleClass('over');
     }
   });
 
-  new ToggleView('#view');
-  console.log('yo');
+  new ToggleView({el: $("#view")});
+
+
+
+
+
+  var SearchForm = Controller.create({
+    elements: {
+      'input[type="search"]': 'searchInput',
+      'form': 'searchForm'
+    },
+
+    events: {
+      'submit form': 'search'
+    },
+
+    search: function(evt) {
+      evt.preventDefault();
+      console.log('search bro');
+    }
+  });
+
+  new SearchForm({el: $("#users")});
 
 });
