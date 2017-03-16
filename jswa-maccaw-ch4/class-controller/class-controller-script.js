@@ -9,6 +9,10 @@
       };
     }
 
+    toggleClass() {
+      this.el.toggleClass('over');
+    }
+
   }
 
 

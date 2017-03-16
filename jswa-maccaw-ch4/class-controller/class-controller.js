@@ -53,9 +53,6 @@ if (window.Example === undefined) window.Example = {};
       }
     }
 
-    toggleClass() {
-      this.el.toggleClass('over');
-    }
 
   }
 

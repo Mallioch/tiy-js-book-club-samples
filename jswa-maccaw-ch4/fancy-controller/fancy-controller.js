@@ -66,3 +66,37 @@ var exports = this;
   exports.Controller = mod;
 
 })(jQuery);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log('helloo');
+
+var obj = {
+  callMe: function() {
+    console.log('called!');
+  },
+
+  aProperty: 'whatever'
+};
+
+obj.callMe();
+
+
+var functionName = 'callMe';
+
+var propertyValue = obj['aProperty'];
+obj[functionName]();
+
+var func = obj[functionName];
+func();
