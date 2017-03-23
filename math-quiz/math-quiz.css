@@ -1,0 +1,21 @@
+#app {
+  border: solid 1px #000;
+  font-family: monospace;
+  max-width: 200px;
+  min-height: 300px;
+  padding: 20px;
+}
+
+.start, .win, .fail {
+  font-size: 2em;
+  text-align: center;
+}
+
+.question {
+  font-size: 2em;
+  text-align: right;
+}
+
+.question input {
+  padding: 6px 4px;
+}

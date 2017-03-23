@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Math Quiz</title>
+    <link rel="Stylesheet" href="math-quiz.css" />
+  </head>
+  <body>
+
+
+    <div id="app"></div>
+
+
+    <script type="text/html" id="quiz-template">
+      <div class="question">
+        <div class="top">{{first}}</div>
+        <div class="bottom">+ {{second}}</div>
+        <input />
+        <button>submit</button>
+      </div>
+    </script>
+
+
+    <script src="jquery-3.1.1.js"></script>
+    <script src="mustache.js"></script>
+    <script src="emitter.js"></script>
+    <script src="fancy-controller.js"></script>
+    <script src="quiz-state-machine.js"></script>
+    <script src="controllers/quiz-controller.js"></script>
+    <script src="controllers/start-controller.js"></script>
+    <script src="controllers/fail-controller.js"></script>
+    <script src="controllers/win-controller.js"></script>
+    <script src="math-quiz.js"></script>
+  </body>
+</html>
